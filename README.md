@@ -43,6 +43,7 @@ $('table').filterTable(); //if this code appears after your tables; otherwise, i
 | `inputName` | string | filter-table | Name attribute of the filter input field |
 | `inputType` | string | search | Tag name of the filter input itself |
 | `label` | string | Filter: | Text to precede the filter input |
+| `minChars` | integer | 1 | Filter is only applied to a table when at least this many characters are entered |
 | `minRows` | integer | 8 | Only show the filter on tables with this number of rows or more |
 | `placeholder` | string | search this table | HTML5 placeholder text for the filter input |
 | `quickList` | array | [] | List of clickable phrases to quick fill the search |

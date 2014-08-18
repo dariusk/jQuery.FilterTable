@@ -34,6 +34,7 @@
                 inputName:         '',                  // name of filter input field
                 inputType:         'search',            // tag name of the filter input tag
                 label:             'Filter:',           // text to precede the filter input tag
+                minChars:          1,                   // don't start filtering until this many characters are entered
                 minRows:           8,                   // don't show the filter on tables with less than this number of rows
                 placeholder:       'search this table', // HTML5 placeholder text for the filter field
                 quickList:         [],                  // list of phrases to quick fill the search
@@ -49,7 +50,7 @@
 
         var doFiltering = function(table, q) { // handle the actual table filtering
                 var tbody=table.find('tbody'); // cache the tbody element
-                if (q==='') { // if the filtering query is blank
+                if (q==='' || q.length < settings.minChars) { // if the filtering query is blank or the number of chars entered is less than minChars
                     tbody.find('tr').show().addClass(settings.visibleClass); // show all rows
                     tbody.find('td').removeClass(settings.highlightClass); // remove the row highlight from all cells
                     if (settings.hideTFootOnFilter) { // show footer if the setting was specified
