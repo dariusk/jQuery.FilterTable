@@ -6,7 +6,7 @@
  *
  * Utilizes bindWithDelay() if available. https://github.com/bgrins/bindWithDelay
  *
- * @version v1.5.3
+ * @version v1.5.4
  * @author Sunny Walker, swalker@hawaii.edu
  */
 (function($) {

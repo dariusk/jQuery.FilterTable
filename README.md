@@ -84,6 +84,10 @@ Other than jQuery, the plugin will take advantage of Brian Grinstead's [bindWith
 
 ## Change Log
 
+### 1.5.4
+
+- Added a `minChars` option, thanks to [Darius Kazemi](https://github.com/dariusk), which specifies the minimum number of characters a user must enter into a filter before filtering occurs. Default is 1, meaning the moment the user begins to type, filtering will occur.
+
 ### 1.5.3
 
 - **There is a potentially significant change in functionality in this version.** While the documentation offered the `inputSelector` option, within the code it was implemented as `filterSelector`. This has been corrected to match the documentation. Note that if you were previously using the `filterSelector` option to overcome this issue, you will need to change it to `inputSelector` to use the feature with this version.
